@@ -1,0 +1,276 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f0b0c553be8edd4682e9180fdd13e37, type: 3}
+  m_Name: I2Languages
+  m_EditorClassIdentifier: 
+  mSource:
+    UserAgreesToHaveItOnTheScene: 0
+    UserAgreesToHaveItInsideThePluginsFolder: 0
+    GoogleLiveSyncIsUptoDate: 1
+    mTerms:
+    - Term: TipWelcome
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u6B61\u8FCE\u4F7F\u7528\nCongmitive ATM\n\u8ACB\u63D2\u5361"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: TipTransferAccount
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u8ACB\u8F38\u5165\u8F49\u5165\u9280\u884C\u5361\u865F..."
+      Flags: 0000
+      Languages_Touch: []
+    - Term: TipPassword
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u8ACB\u8F38\u5165\u5BC6\u78BC..."
+      Flags: 0000
+      Languages_Touch: []
+    - Term: TipWithdrawal
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u8ACB\u8F38\u5165\u53D6\u6B3E\u91D1\u984D..."
+      Flags: 0000
+      Languages_Touch: []
+    - Term: BtnComfirm
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u78BA\u8A8D"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: BtnClear
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u66F4\u6B63"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: BtnExit
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u9000\u5361"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: BtnWithdrawal
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u53D6\u6B3E"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: BtnBalance
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u67E5\u8A62"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: BtnReturn
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u8FD4\u56DE"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: BtnReturnHome
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u8FD4\u56DE\u9996\u9801"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: BtnTransfer
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u8F49\u5E33"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: BtnGoOn
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u7E7C\u7E8C\u8F49\u5E33"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: PassWordError
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u5BC6\u78BC\u932F\u8AA4,\u8ACB\u91CD\u65B0\u8F38\u5165"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: TransferComfirm
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u8ACB\u6838\u5C0D\u8F49\u5165\u5E33\u865F\u53CA\u91D1\u984D"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: UserName
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u7528\u6236\u540D"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Account
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u8F49\u5165\u5E33\u865F"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: MoneySaved
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u4EE5\u653E\u5165\u7684\u9322\u70BA"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: TWD
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u65B0\u53F0\u5E63"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: MoneyLast
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u60A8\u7684\u9918\u984D:"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: TitlePassword
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u8ACB\u8F38\u5165\u91D1\u878D\u5361\u5BC6\u78BC"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: TitleUserPanel
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u8ACB\u9078\u64C7\u670D\u52D9\u9805\u76EE"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: TaskErrorMseeage
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u8ACB\u8F38\u5165\u6B63\u78BA\u7684\u4EFB\u52D9"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: TipAccountNoExist
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u4E0D\u5B58\u5728\u8A72\u5E33\u6236"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: TitleTransferFirst
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u8ACB\u8F38\u5165\u8F49\u5165\u9280\u884C\u5361\u865F"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: TipTransferAmount
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u8ACB\u8F38\u5165\u8F49\u5E33\u91D1\u984D..."
+      Flags: 0000
+      Languages_Touch: []
+    - Term: TipTransferNumber
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - 
+      Flags: 0000
+      Languages_Touch: []
+    - Term: TipTransferSucceed
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u8F49\u5E33\u6210\u529F"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: TipTransferDefeat
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u8F49\u5E33\u5931\u6557"
+      Flags: 0000
+      Languages_Touch: []
+    CaseInsensitiveTerms: 0
+    OnMissingTranslation: 1
+    mTerm_AppName: 
+    mLanguages:
+    - Name: English
+      Code: en
+      Flags: 0
+    - Name: Chinese (Taiwan)
+      Code: zh-TW
+      Flags: 0
+    IgnoreDeviceLanguage: 0
+    _AllowUnloadingLanguages: 1
+    Google_WebServiceURL: 
+    Google_SpreadsheetKey: 
+    Google_SpreadsheetName: 
+    Google_LastUpdatedVersion: 
+    Google_Password: change_this
+    GoogleUpdateFrequency: 3
+    GoogleInEditorCheckFrequency: 2
+    GoogleUpdateDelay: 5
+    Assets: []
+    Spreadsheet_LocalFileName: 
+    Spreadsheet_LocalCSVSeparator: ','
+    Spreadsheet_LocalCSVEncoding: utf-8
+    Spreadsheet_SpecializationAsRows: 1
