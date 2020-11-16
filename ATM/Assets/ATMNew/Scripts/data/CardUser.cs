@@ -30,10 +30,6 @@ namespace LabData
         }
 
     }
-    public static class ATMTaskInfoPool
-    {
-        public static string[] Password = new string[] { "123456", "985608", "153256", "236754", "978435", "345433" };
-        public static int[] Money = new int[] { 1000, 3000, 100, 500, 5000, 10000 };
-    }
+   
 }
 

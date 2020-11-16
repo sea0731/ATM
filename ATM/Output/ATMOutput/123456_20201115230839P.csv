@@ -1,0 +1,12 @@
+Time,Action
+00:00:09.5599434,"CardIn"
+00:00:17.3985279,"Task Panel Show"
+00:00:24.9944631,"Password,Confirm"
+00:00:27.2476596,"ChooseTask,Draw"
+00:00:29.2299369,"DrawFirst,100"
+00:00:34.2945303,"Keyboard,Confirm"
+00:00:38.4735452,"Take Money"
+00:00:42.2300125,"DrawThird,Return"
+00:00:43.5678106,"ChooseTask,BtnExit"
+00:00:47.4058431,"Task Panel Hide"
+00:00:00,"EMPTY Total Time"

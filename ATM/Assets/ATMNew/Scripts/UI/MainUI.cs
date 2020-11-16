@@ -21,6 +21,8 @@ public class MainUI : MonoBehaviour
     public InputField userPassword;
     public Text inputError;
 
+    private Queue<ATMTask> taskQueue;
+
     private void Start()
     {
         LabTools.CreateDataFolder<UserCard>();
@@ -36,6 +38,12 @@ public class MainUI : MonoBehaviour
 
     public void StartButtonClick()
     {
+        UserCard userCard = LabTools.GetData<UserCard>(userChooser.captionText.text);
+
+        taskQueue = CreateTaskQueue(SetTaskType());
+
+        GameDataManager.FlowData = new GameFlowData("01", userCard, taskQueue);
+
         GameSceneManager.Instance.Change2MainScene();
     }
 
@@ -92,5 +100,33 @@ public class MainUI : MonoBehaviour
         }
 
         userChooser.value = 0;
+    }
+
+    private ATMTASKTYPE SetTaskType()
+    {
+        switch(taskEditor.value)
+        {
+            case 0:
+                return ATMTASKTYPE.DRAW;
+            case 1:
+                return ATMTASKTYPE.TRANSFER;
+            case 2:
+                return ATMTASKTYPE.CHECK;
+            default:
+                return ATMTASKTYPE.DRAW;
+        }
+    }
+
+    private Queue<ATMTask> CreateTaskQueue(ATMTASKTYPE type)
+    {
+        Queue<ATMTask> taskQueue = new Queue<ATMTask>();
+
+        taskQueue.Enqueue(new ATMTask(ATMTASKTYPE.CARDIN, false, 0));
+        taskQueue.Enqueue(new ATMTask(ATMTASKTYPE.PASSWORD, false, 0));
+        taskQueue.Enqueue(new ATMTask(ATMTaskFromUI.TaskFromUI, false, ATMTaskInfoPool.Money[UnityEngine.Random.Range(0, ATMTaskInfoPool.Money.Length)]));
+        taskQueue.Enqueue(new ATMTask(ATMTASKTYPE.CARDOUT, false, 0));
+        taskQueue.Enqueue(new ATMTask(ATMTASKTYPE.FINISHED, false, 0));
+
+        return taskQueue;
     }
 }

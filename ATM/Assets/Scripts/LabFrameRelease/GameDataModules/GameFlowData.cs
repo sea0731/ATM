@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DataSync;
-
+using LabData;
 
 
 namespace GameData
@@ -19,6 +19,10 @@ namespace GameData
         /// </summary>
         public string UserId { get; set; } = "Test01";
 
+
+        public UserCard userCard;
+
+        public Queue<ATMTask> taskQueue;
         /// <summary>
         /// FlowData 构造函数
         /// </summary>
@@ -26,10 +30,11 @@ namespace GameData
         /// <param name="languageType"></param>
         /// <param name="remindType"></param>
         /// <param name="gameData"></param>
-        public GameFlowData(string UserID, Language languageType)
+        public GameFlowData(string UserID, UserCard userCard, Queue<ATMTask> taskQueue)
         {
-            Language = languageType;
             UserId = UserID;
+            this.userCard = userCard;
+            this.taskQueue = taskQueue;
         }
 
         public GameFlowData()

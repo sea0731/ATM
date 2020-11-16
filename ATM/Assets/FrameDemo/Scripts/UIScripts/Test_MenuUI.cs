@@ -22,9 +22,9 @@ namespace TestGameFrame
 
             GameDataManager.FlowData = gameFlow;
 
-            var Id = gameFlow.UserId;
+            //var Id = gameFlow.UserId;
 
-            GameDataManager.LabDataManager.LabDataCollectInit(() => Id);
+            //GameDataManager.LabDataManager.LabDataCollectInit(() => Id);
 
             GameSceneManager.Instance.Change2MainScene();
         }
