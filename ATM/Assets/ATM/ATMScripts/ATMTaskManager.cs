@@ -46,7 +46,7 @@ public class ATMTaskManager : MonoBehaviour {
         yield return StartCoroutine(ATMTrainingPanelTextManager._Instance.NextText());
         yield return new WaitForSeconds(5);
         yield return StartCoroutine(ATMTrainingPanelTextManager._Instance.NextText());
-        StartCoroutine(ATMFingerTip._instance.TimerCount());
+        //StartCoroutine(ATMFingerTip._instance.TimerCount());
         ATMFingerTip._instance._isOpen = ATMTaskFromUI.IsTipon;
         ATMRealCard.Instance._switch = true;
     }

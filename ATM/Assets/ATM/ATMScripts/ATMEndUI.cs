@@ -36,6 +36,7 @@ public class ATMEndUI : MonoBehaviour {
     private bool isTimePointSet = false;
     private bool isPerformancePointSet = false;
 
+    public GameObject mainCanvas;
 
     private bool isInitGraph = false;
 
@@ -60,7 +61,7 @@ public class ATMEndUI : MonoBehaviour {
     private void MainBtnClick()
     {
         CloseAllPanel();
-        mainPanel.SetActive(true);
+        
     }
 
     private void GraphBtnClick()
@@ -121,10 +122,7 @@ public class ATMEndUI : MonoBehaviour {
 
     private void ReturnBtnClick()
     {
-        //切换自己的场景
-        UnityEngine.SceneManagement.SceneManager.LoadScene("ATMSelection");
-        //切换大系统
-        //StartCoroutine(ScenesManager.BeginLoader("MSLoading"));
+        GameSceneManager.Instance.Change2MainUI();
     }
 
     public void ShowEnd()
@@ -132,6 +130,8 @@ public class ATMEndUI : MonoBehaviour {
         panel.SetActive(true);
         CloseAllPanel();
         mainPanel.SetActive(true);
+
+        mainCanvas.SetActive(false);
     }
 
     public void Close()

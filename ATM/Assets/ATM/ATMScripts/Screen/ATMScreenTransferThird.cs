@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 using System;
+using GameData;
 
 public class ATMScreenTransferThird : ATMWithKeyBoard
 {
@@ -20,6 +21,7 @@ public class ATMScreenTransferThird : ATMWithKeyBoard
 
     public override void OnEnable()
     {
+        Debug.Log("1");
         base.OnEnable();
         _CurrentInputField.text = "";
         ATMAudioManager.PlayEF("TransferInputCount");
@@ -50,12 +52,17 @@ public class ATMScreenTransferThird : ATMWithKeyBoard
         _BtnConfirm.onClick.AddListener(OnBtnConfirmClick);
         _BtnReturn.onClick.AddListener(OnBtnReturnClick);
         _BtnClear.onClick.AddListener(InputClear);
-        _BtnExit.onClick.AddListener(OnBtnExitClick);
+      //  _BtnExit.onClick.AddListener(OnBtnExitClick);
     }
 
     public override void AddInput(string value)
     {
-        if (_CurrentInputField.text.Length < ATMConfig._MoneyLength)
+        if (_CurrentInputField == null)
+        {
+            Debug.LogError("InputField had not been set");
+        }
+        Debug.Log(_CurrentInputField.text.Length);
+        if (_CurrentInputField.text.Length < GobalData._MoneyLength)
         {
             _CurrentInputField.text += value;
         }
@@ -104,22 +111,25 @@ public class ATMScreenTransferThird : ATMWithKeyBoard
             _CurrentInputField.text = "";
             return;
         }
-        if (!ATMTaskManager._Instance.CheckMoney(inputmoney))
+        if (GameDataManager.FlowData.task.money != inputmoney)
         {
             _CurrentInputField.text = "";
             MoneyInCorrect();
             return;
         }
-            
-       
-        int outmoney = CardUserManager.TransferOutByID(ATMScreenManager._Instance.CurrentCardUser.UserID, inputmoney);
-        if (outmoney > 0)
+        else
         {
-            CardUserManager.TransferInCard(ATMScreenTransfer._Instance._targetId, outmoney);
+            GameUI._instance.TaskDone(TASKTYPE);
+            ATMScreenTransfer._Instance.SetGOActive(3);
         }
-        ATMTaskManager._Instance.TaskDone(TASKTYPE);
-        ATMScreenTransfer._Instance._transfermoney = outmoney;
-        ATMScreenTransfer._Instance.SetGOActive(3);
+
+
+        //       int outmoney = CardUserManager.TransferOutByID(ATMScreenManager._Instance.CurrentCardUser.UserID, inputmoney);
+        //     if (outmoney > 0)
+        //       {
+        //         CardUserManager.TransferInCard(ATMScreenTransfer._Instance._targetId, outmoney);
+        //        }
+        //ATMScreenTransfer._Instance._transfermoney = outmoney;
     }
 
     private void MoneyInCorrect()

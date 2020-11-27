@@ -40,10 +40,8 @@ public class ATMScreenManager : MonoBehaviour
 
             if (currentScreen == SCREENTYPE.WELCOME)
             {
-                if (_CurrentCardUser != null)
-                {
+                if(ATMCardslot._Hascard)
                     EjectCardUser();
-                }
             }
         }
     }
@@ -69,7 +67,7 @@ public class ATMScreenManager : MonoBehaviour
     {
         CurrentCardUser = null;
         ATMCardslot._Hascard = false;
-        ATMTaskManager._Instance.TaskDone(ATMTASKTYPE.CARDOUT);
+        GameUI._instance.TaskDone(ATMTASKTYPE.CARDOUT);
         if (_EventCardOut != null)
         {
             _EventCardOut();
@@ -89,7 +87,7 @@ public class ATMScreenManager : MonoBehaviour
 
     public bool CheckPassWord(string password)
     {
-        if (_CurrentCardUser == null)
+        if (GameDataManager.FlowData.userCard.Password== null)
         {
             CurrentScreen = SCREENTYPE.WELCOME;
             Debug.LogError("系统错误，请重新插卡");
@@ -97,7 +95,7 @@ public class ATMScreenManager : MonoBehaviour
         }
         else
         {
-            return _CurrentCardUser.CheckPassword(password);
+            return GameDataManager.FlowData.userCard.Password == password;
         }
     }
 }

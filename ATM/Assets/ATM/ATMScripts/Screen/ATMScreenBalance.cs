@@ -45,8 +45,8 @@ public class ATMScreenBalance : ATMWithKeyBoard,IATMTipScreen
     void ShowBalance()
     {
         // text.text = CardUserManager.CheckUserBalanceByID(ScreenManager._Instance.CurrentCardUser.UserID);
-        text.text = string.Format("{0:N}", CardUserManager.CheckUserBalanceByID(ATMScreenManager._Instance.CurrentCardUser.UserID));
-        ATMTaskManager._Instance.TaskDone(TASKTYPE);
+        text.text = string.Format("{0:N}", GameDataManager.FlowData.userCard.Balance);
+        GameUI._instance.TaskDone(TASKTYPE);
 
     }
 

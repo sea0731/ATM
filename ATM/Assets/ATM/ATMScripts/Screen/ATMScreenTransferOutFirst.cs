@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 using System;
+using GameData;
 
 public class ATMScreenTransferOutFirst : ATMWithKeyBoard,IATMTipScreen
 {
@@ -69,7 +70,7 @@ public class ATMScreenTransferOutFirst : ATMWithKeyBoard,IATMTipScreen
         {
             Debug.LogError("InputField had not been set");
         }
-        if (_CurrentInputField.text.Length < ATMConfig._MoneyLength)
+        if (_CurrentInputField.text.Length < GobalData._MoneyLength)
         {
             _CurrentInputField.text += value;
         }
@@ -100,7 +101,7 @@ public class ATMScreenTransferOutFirst : ATMWithKeyBoard,IATMTipScreen
         }
 
         int money = int.Parse(_CurrentInputField.text);
-        if (!ATMTaskManager._Instance.CheckMoney(money))
+        if (GameDataManager.FlowData.task.money != money)
         {
             _CurrentInputField.text = "";
             MoneyInCorrect();
@@ -111,9 +112,10 @@ public class ATMScreenTransferOutFirst : ATMWithKeyBoard,IATMTipScreen
             _CurrentInputField.text = "";
             return;
         }
-        int outmoney = CardUserManager.TransferOutByID(ATMScreenManager._Instance.CurrentCardUser.UserID, money);
+
+        int outmoney = GameDataManager.FlowData.userCard.transferOut(money);
         ATMScreenTransferOut._Instance._OutMoney = outmoney;
-        ATMTaskManager._Instance.TaskDone(TASKTYPE);
+        GameUI._instance.TaskDone(TASKTYPE);
         ATMScreenTransferOut._Instance.SetGOActive(1);
     }
 

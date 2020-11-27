@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 using System;
+using GameData;
 
 public class ATMScreenTransferFirst : ATMWithKeyBoard,IATMTipScreen
 {
@@ -63,12 +64,12 @@ public class ATMScreenTransferFirst : ATMWithKeyBoard,IATMTipScreen
         {
             Debug.LogError("InputField had not been set");
         }
-        if (_CurrentInputField.text.Length < ATMConfig._AccountLength)
+        if (_CurrentInputField.text.Length < GobalData._AccountLength)
         {
             _CurrentInputField.text += value;
         }
-        if (ATMTaskManager.CurrentTaskType == TASKTYPE)
-            if (_CurrentInputField.text.Length == ATMConfig._AccountLength)
+        if (GameUI.currentTask.taskFromUI == TASKTYPE)
+            if (_CurrentInputField.text.Length == GobalData._AccountLength)
                 SetTip(transform.Find("BtnConfirm"), false);
             else
             {
@@ -88,15 +89,9 @@ public class ATMScreenTransferFirst : ATMWithKeyBoard,IATMTipScreen
 
     void OnBtnConfirmClick()
     {
-        if (_CurrentInputField.text == "")
+        if (_CurrentInputField.text == GameDataManager.FlowData.task.targetID)
         {
-            return;
-        }
-        string id = _CurrentInputField.text;
-        string name = CardUserManager.CheckUserNameByID(id);
-        if (name != "")
-        {
-            ATMScreenTransfer._Instance.SetUserInfo(id, name);
+            ATMScreenTransfer._Instance.SetUserInfo(GameDataManager.FlowData.task.targetID, GameDataManager.FlowData.task.targetName);
         }
         else
         {

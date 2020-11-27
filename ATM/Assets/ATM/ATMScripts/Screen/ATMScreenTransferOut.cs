@@ -6,7 +6,7 @@ using System;
 public class ATMScreenTransferOut : MonoBehaviour
 {
     public static ATMScreenTransferOut _Instance;
-    public GameObject[] All;
+    public GameObject[] screens;
 
     public int _OutMoney;
 
@@ -17,15 +17,15 @@ public class ATMScreenTransferOut : MonoBehaviour
 
     public void SetGOActive(int index)
     {
-        if (All.Length < 2)
+        if (screens.Length < 2)
         {
             Debug.LogError("you need add GO into ALL[]");
         }
-        for (int i = 0; i < All.Length; i++)
+        for (int i = 0; i < screens.Length; i++)
         {
-            All[i].SetActive(false);
+            screens[i].SetActive(false);
         }
-        All[index].SetActive(true);
+        screens[index].SetActive(true);
     }
 
     void OnEnable()

@@ -1,0 +1,10 @@
+Time,Action
+00:00:09.2527202,"CardIn"
+00:00:09.4057688,"CardIn"
+00:00:20.1344150,"Password,Confirm"
+00:00:22.2178376,"ChooseTask,Draw"
+00:00:23.0033768,"Task Panel Show"
+00:00:24.5249191,"DrawFirst,1000"
+00:00:24.8528038,"DrawFirst,Confirm"
+00:01:50.4056565,"Task Panel Hide"
+00:00:00,"EMPTY Total Time"

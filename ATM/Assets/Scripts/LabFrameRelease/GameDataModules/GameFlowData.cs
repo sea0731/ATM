@@ -22,7 +22,7 @@ namespace GameData
 
         public UserCard userCard;
 
-        public Queue<ATMTask> taskQueue;
+        public ATMTask task;
         /// <summary>
         /// FlowData 构造函数
         /// </summary>
@@ -30,11 +30,11 @@ namespace GameData
         /// <param name="languageType"></param>
         /// <param name="remindType"></param>
         /// <param name="gameData"></param>
-        public GameFlowData(string UserID, UserCard userCard, Queue<ATMTask> taskQueue)
+        public GameFlowData(string UserID, UserCard userCard, ATMTask task)
         {
             UserId = UserID;
             this.userCard = userCard;
-            this.taskQueue = taskQueue;
+            this.task = task;
         }
 
         public GameFlowData()

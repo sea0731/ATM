@@ -7,7 +7,7 @@ public class ATMScreenTransferSecond : ATMWithKeyBoard,IATMTipScreen
 {
     public Button _BtnConfirm;
     public Button _BtnReturn;
-    public Button _BtnExit;
+    public Button _BtnClear;
     public Text _TxtValueUserName;
     public Text _TxtValueCard;
 
@@ -27,9 +27,9 @@ public class ATMScreenTransferSecond : ATMWithKeyBoard,IATMTipScreen
     public void SetTip()
     {
        
-        if (ATMTaskManager.CurrentTaskType == ATMTASKTYPE.CARDOUT)
-            SetTip(_BtnExit.transform, false);
-        else if (ATMTaskManager.CurrentTaskType != TASKTYPE)
+       // if (ATMTaskManager.CurrentTaskType == ATMTASKTYPE.CARDOUT)
+       //     SetTip(_BtnExit.transform, false);
+        if (ATMTaskManager.CurrentTaskType != TASKTYPE)
         {
             SetTip(_BtnReturn.transform, false);
         }
@@ -62,7 +62,7 @@ public class ATMScreenTransferSecond : ATMWithKeyBoard,IATMTipScreen
     {
         _BtnConfirm.onClick.AddListener(OnBtnConfirmClick);
         _BtnReturn.onClick.AddListener(OnBtnReturnClick);
-        _BtnExit.onClick.AddListener(OnBtnExitClick);
+        //_BtnClear.onClick.AddListener(OnBtnClearClick);
     }
 
 

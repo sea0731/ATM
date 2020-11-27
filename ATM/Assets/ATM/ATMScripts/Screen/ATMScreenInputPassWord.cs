@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 using System;
+using GameData;
 
 public class ATMScreenInputPassWord : ATMWithKeyBoard,IATMTipScreen
 {
@@ -55,11 +56,11 @@ public class ATMScreenInputPassWord : ATMWithKeyBoard,IATMTipScreen
         {
             Debug.LogError("InputField had not been set");
         }
-        if (_CurrentInputField.text.Length < ATMConfig._PassWordLength)
+        if (_CurrentInputField.text.Length < GobalData._PassWordLength)
         {
             _CurrentInputField.text += value;
         }
-        if(_CurrentInputField.text.Length == ATMConfig._PassWordLength)
+        if(_CurrentInputField.text.Length == GobalData._PassWordLength)
             SetTip(transform.Find("BtnConfirm"), false);
         else if(_ErrorCount<3)
             SetTip(_btnTasking.transform, true);
@@ -87,7 +88,7 @@ public class ATMScreenInputPassWord : ATMWithKeyBoard,IATMTipScreen
         if (ATMScreenManager._Instance.CheckPassWord(_CurrentInputField.text))
         {
             _ErrorCount = 0;
-            ATMTaskManager._Instance.TaskDone(TASKTYPE);
+            GameUI._instance.TaskDone(TASKTYPE);
             ATMScreenManager._Instance.CurrentScreen = SCREENTYPE.USERPANEL;
             
         }

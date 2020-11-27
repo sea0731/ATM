@@ -1,0 +1,12 @@
+Time,Action
+00:00:09.1557215,"CardIn"
+00:00:09.3076270,"CardIn"
+00:00:09.4607638,"CardIn"
+00:00:17.6147327,"Password,Confirm"
+00:00:19.1160282,"ChooseTask,Draw"
+00:00:26.3583713,"DrawFirst,Confirm"
+00:00:33.1402104,"Take Money"
+00:00:34.9326173,"DrawThird,Return"
+00:00:37.4463965,"ChooseTask,BtnExit"
+00:00:37.4494156,"Task Finished"
+00:00:37.4504124,"EMPTY Total Time"

@@ -21,7 +21,7 @@ public class ATMScreenTransferOutThird : MonoBehaviour,IATMTipScreen
     {
         if(ATMMaoyeye._IsShow)
             SetTip(_maoyeye.transform, false);
-        else if (ATMTaskManager.CurrentTaskType != TASKTYPE)
+        else if (GameUI.currentTask.taskFromUI != TASKTYPE)
             SetTip(_BtnReturn.transform, false);
         else
             SetTip(_BtnGoOn.transform, false);

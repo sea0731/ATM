@@ -158,7 +158,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - 
-      - "\u4EE5\u653E\u5165\u7684\u9322\u70BA"
+      - "\u5DF2\u653E\u5165\u7684\u9322\u70BA"
       Flags: 0000
       Languages_Touch: []
     - Term: TWD
@@ -225,14 +225,6 @@ MonoBehaviour:
       - "\u8ACB\u8F38\u5165\u8F49\u5E33\u91D1\u984D..."
       Flags: 0000
       Languages_Touch: []
-    - Term: TipTransferNumber
-      TermType: 0
-      Description: 
-      Languages:
-      - 
-      - 
-      Flags: 0000
-      Languages_Touch: []
     - Term: TipTransferSucceed
       TermType: 0
       Description: 
@@ -247,6 +239,216 @@ MonoBehaviour:
       Languages:
       - 
       - "\u8F49\u5E33\u5931\u6557"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: TipWaitingForMoney
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u767C\u9214\u4E2D\uFF0C\u8ACB\u7A0D\u5F8C..."
+      Flags: 0000
+      Languages_Touch: []
+    - Term: BtnDrawAgain
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u7E7C\u7E8C\u53D6\u6B3E"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: TaskTextDollars
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "</color>\u5143"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: TaskTextPassword
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u5BC6\u78BC\u70BA\n<color=red>"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: EndColor
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - '</color>
+
+'
+      Flags: 0000
+      Languages_Touch: []
+    - Term: TaskTextCheck
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u8ACB<color=red>\u67E5\u8A62</color>\u9918\u984D"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: TaskTextTransfer1
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u8ACB\u5411\u5E33\u6236\n<color=red>"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: TaskTextDraw
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u8ACB\u53D6\u6B3E\n<color=red>"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: TaskTipCardIn
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u8ACB\u63D2\u5361"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: TaskTextTransfer2
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "</color>\n\u8F49\u5E33\n<color=red>"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: TaskTipDraw
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u8ACB\u53D6\u6B3E\n<color=red>"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: TaskTipPassword
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u8ACB\u8F38\u5165\u5BC6\u78BC\n"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: TaskTipTransfer1
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u8ACB\u5411\u5E33\u6236\n<color=red>"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: TaskTipTransfer2
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "</color>\n\u8F49\u5E33\n<color=red>"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: TaskTipFinished
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u606D\u559C\u4F60\u5DF2\u5B8C\u6210\u6240\u6709\u4EFB\u52D9!"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: TaskTipCardOut
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u8ACB\u9000\u51FA\u5361"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: BtnReturnToMainUI
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u8FD4\u56DE\u4E3B\u83DC\u55AE"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: TaskFinishTime
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u5B8C\u6210\u4EFB\u52D9\u6642\u9593\u70BA:\n\n<color=red>"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: TaskFinish
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u606D\u559C\u60A8\u5B8C\u6210\u6240\u6709\u4EFB\u52D9\n\n"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Minutes
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u5206\u9418"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: Seconds
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u79D2</color>"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: TaskTipCheck
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u8ACB\u67E5\u8A62\u9918\u984D"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: TipWaitingTransfer
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u8F49\u5E33\u4E2D\uFF0C\u8ACB\u7A0D\u7B49..."
+      Flags: 0000
+      Languages_Touch: []
+    - Term: TipTransferFinish2
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u8F49\u5E33\n"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: TipTransferFinish3
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u65B0\u53F0\u5E63 \u6210\u529F"
+      Flags: 0000
+      Languages_Touch: []
+    - Term: TipTransferFinish1
+      TermType: 0
+      Description: 
+      Languages:
+      - 
+      - "\u5411"
       Flags: 0000
       Languages_Touch: []
     CaseInsensitiveTerms: 0

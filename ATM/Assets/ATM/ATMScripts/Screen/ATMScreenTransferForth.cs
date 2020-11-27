@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 using System;
+using I2.Loc;
 
 public class ATMScreenTransferForth : MonoBehaviour,IATMTipScreen
 {
@@ -49,17 +50,19 @@ public class ATMScreenTransferForth : MonoBehaviour,IATMTipScreen
 
     IEnumerator ShowTransferOutING()
     {
-        _ShowMessage.text = "转账中，请稍等。。。";
+        _ShowMessage.text = ScriptLocalization.TipWaitingTransfer;
         yield return new WaitForSeconds(2);
-        if (ATMScreenTransfer._Instance._transfermoney == 0)
-        {
-            ATMAudioManager.PlayEF("OperationError");
-            _ShowMessage.text = "对不起,暂不能办理此项业务";
-        }
-        else
-        {
-            _ShowMessage.text = "向 " + ATMScreenTransfer._Instance._targetName + " 转账 " + string.Format("{0:N}", ATMScreenTransfer._Instance._transfermoney) + "RMB 成功";
-        }
+        //        if (ATMScreenTransfer._Instance._transfermoney == 0)
+        //        {
+        //            ATMAudioManager.PlayEF("OperationError");
+        //            _ShowMessage.text = "对不起,暂不能办理此项业务";
+        //        }
+        //        else
+        //        {
+        //        }
+
+        _ShowMessage.text = ScriptLocalization.TipTransferFinish1 + ATMScreenTransfer._Instance._targetName + ScriptLocalization.TipTransferFinish2 + string.Format("{0:N}", GameDataManager.FlowData.task.money) + ScriptLocalization.TipTransferFinish3;
+
         yield return new WaitForSeconds(2);
         ShowButton();
     }

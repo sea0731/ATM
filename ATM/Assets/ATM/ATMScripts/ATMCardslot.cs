@@ -5,14 +5,7 @@ using System.Collections;
 public class ATMCardslot : MonoBehaviour
 {
     public static bool _Hascard = false;
-    //public Button _BtnCardChosen;
-    //public Image _CardPanel;
-    //public Image _CardSlot;
-
-    //void Awake()
-    //{
-    //    _BtnCardChosen.onClick.AddListener(OnBtnCardChosenClick);
-    //}
+   
 
     void OnEnable()
     {
@@ -42,15 +35,15 @@ public class ATMCardslot : MonoBehaviour
     {
       
         ATMAudioManager.PlayEF("PassWordInput");
-        ATMScreenManager._Instance.SetCardUser(CardUserManager._CardUser0);
-        ATMTaskManager._Instance.TaskDone(ATMTASKTYPE.CARDIN);
+        //ATMScreenManager._Instance.SetCardUser(CardUserManager._CardUser0);
+        GameUI._instance.TaskDone(ATMTASKTYPE.CARDIN);
         ATMScreenManager._Instance.SetScreenByType(SCREENTYPE.INPUTPASSWORD);
     }
 
     IEnumerator CardInIE()
     {
         float waitlength = ATMAudioManager.PlayEF("CardIn");
-      yield return new WaitForSeconds(waitlength);
+        yield return new WaitForSeconds(waitlength);
       
         CardInFinished();
     }

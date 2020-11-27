@@ -21,7 +21,7 @@ public class MainUI : MonoBehaviour
     public InputField userPassword;
     public Text inputError;
 
-    private Queue<ATMTask> taskQueue;
+    private ATMTask task;
 
     private void Start()
     {
@@ -40,9 +40,9 @@ public class MainUI : MonoBehaviour
     {
         UserCard userCard = LabTools.GetData<UserCard>(userChooser.captionText.text);
 
-        taskQueue = CreateTaskQueue(SetTaskType());
+        task = new ATMTask(SetTaskType(), false, ATMTaskInfoPool.Money[UnityEngine.Random.Range(0, ATMTaskInfoPool.Money.Length)]);
 
-        GameDataManager.FlowData = new GameFlowData("01", userCard, taskQueue);
+        GameDataManager.FlowData = new GameFlowData("01", userCard, task);
 
         GameSceneManager.Instance.Change2MainScene();
     }
@@ -117,16 +117,5 @@ public class MainUI : MonoBehaviour
         }
     }
 
-    private Queue<ATMTask> CreateTaskQueue(ATMTASKTYPE type)
-    {
-        Queue<ATMTask> taskQueue = new Queue<ATMTask>();
-
-        taskQueue.Enqueue(new ATMTask(ATMTASKTYPE.CARDIN, false, 0));
-        taskQueue.Enqueue(new ATMTask(ATMTASKTYPE.PASSWORD, false, 0));
-        taskQueue.Enqueue(new ATMTask(ATMTaskFromUI.TaskFromUI, false, ATMTaskInfoPool.Money[UnityEngine.Random.Range(0, ATMTaskInfoPool.Money.Length)]));
-        taskQueue.Enqueue(new ATMTask(ATMTASKTYPE.CARDOUT, false, 0));
-        taskQueue.Enqueue(new ATMTask(ATMTASKTYPE.FINISHED, false, 0));
-
-        return taskQueue;
-    }
+    
 }
